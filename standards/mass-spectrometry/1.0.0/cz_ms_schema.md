@@ -4,7 +4,7 @@ Contact: [carlos.gonzalez@czbiohub.org](mailto:carlos.gonzalez@czbiohub.org)
 
 Document Status: *Draft*
 
-Version: 2.0.0
+Version: 1.0.0
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED" "MAY", and "OPTIONAL" in this document are to be interpreted as described in [BCP 14](https://tools.ietf.org/html/bcp14), [RFC2119](https://www.rfc-editor.org/rfc/rfc2119.txt), and [RFC8174](https://www.rfc-editor.org/rfc/rfc8174.txt) when, and only when, they appear in all capitals, as shown here.
 
@@ -105,25 +105,10 @@ This refers specifically to how ontology terms from tables/fields defined in thi
 | characteristics[organism] | organism | Yes (NCBITaxon) |
 | factor value[organism_ontology_term_id]  | organism_ontology_term_id | Yes (NCBITaxon) |
 | characteristics[developmental_stage] | development_stage | Yes(HsapDV, MmusDv, ZFS,  WBLS, FBDV) |
+| factor value[developmental_stage_ontology_term_id] | development_stage_ontology_term_id | Yes (HsapDV, MmusDv, ZFS,  WBLS, FBDV) |
 | characteristics[organism part] | tissue | Yes (UBERON, ZFA, FBbt, WBbt) |
-| characteristics[tissue_type] | tissue_type | Yes (CZI terms) |
-
-## Special Mapping for Cross-Modality Tissue Type
-
-As tissue type has if-then logic, we split it out here to ensure clarity. All these will map to `tissue_type_ontology_id`.
-**Label and term ID as split as characteristics[Label] and factor value [term ID].**
-
-| tissue_type value | CZB-MS equivalent | Ontology
-| :---- | :---- | :---- |
-| cell line | characteristics[cell line] | CLO (temporary, **phasing in Cellosaurus** in next version) |
-| cell culture | characteristics[cell culture] | CL |
-| organelle | characteristics[organelle] | `GO:0005575` descendant |
-| organoid OR tissue | characteristics[organism part] | UBERON, ZFA, FBbt, WBbt |
-
-ADDITIONAL NOTE: If the corresponding tissue_type is "cell culture", the following Cell Ontology (CL) terms MUST NOT be used:
-"CL:0000255" for eukaryotic cell
-"CL:0000257" for Eumycetozoan cell
-"CL:0000548" for animal cell
+| factor value[organism_part_ontology_term_id] | tissue_ontology_term_id | Yes (UBERON, ZFA, FBbt, WBbt) |
+| factor value[tissue_class] | tissue_type | Yes (NA) |
 
 ## Mass spectrometer-specific files
 
