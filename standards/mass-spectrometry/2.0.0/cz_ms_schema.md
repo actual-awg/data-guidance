@@ -98,7 +98,7 @@ This refers specifically to how ontology terms from tables/fields defined in thi
 
 | CZB-MS | CZI Crossmodal | Matching Ontology? |
 | :---- | :---- | :---- |
-| commnent[technology type] | assay | Yes (EFO) |
+| comment[technology type] | assay | Yes (EFO) |
 | factor value[technology_type_id] | assay_ontology_term_id | Yes (EFO) |
 | characteristics[disease] | disease | Yes (MONDO, PATO) |
 | factor value[disease_ontology_term_id] | disease_ontology_term_id | Yes (MONDO, PATO) |
@@ -237,7 +237,7 @@ Sample characteristics refer to the intrinsic properties of a sample such as its
 | characteristics[organism] | NCBI-derived taxonomy term | - String<br> - **NCBITaxon derived label**<br> - Free text fall back label accepted but discouraged by UI<br> - Submitter MUST annotate Other accepted values: ‘not available’ and ‘not applicable’<br> - **Example:** Homo sapiens |
 | characteristics[disease] | MONDO derived disease term | - String<br> **MONDO- and PATO-derived label**, Submitter MUST annotate, Other accepted values: ‘healthy’ (PATO), ‘normal’ (PATO), ‘not available’ and ‘not applicable’<br> - **Example:** cancer |
 | characteristics[development_stage] | Refers to discrete organismal developmental stage | - String <br> - **Derived label from one of the following ontologies** (depending on organism selected): HsapDV, MmusDv, ZFS, WBls, FBbv |
-| charactersitics[tissue type] | Refers to CZI-specific tissue type term | - String<br> - **CZB-SF specific label**<br> - Acceptable values: ‘tissue’, ‘organoid’, and ‘cell culture’ |
+| characteristics[tissue type] | Refers to CZI-specific tissue type term | - String<br> - **CZB-SF specific label**<br> - Acceptable values: ‘tissue’, ‘organoid’, and ‘cell culture’ |
 | characteristics[organism part] | Refers to source organ or tissue, as noted by UBERON ontology. In the case of cell lines, refer to the original tissue type. | - String<br> - **UBERON derived label**<br> - Free text fall back<br> - Submitter MUST annotate<br> - Other accepted values: ‘not available’ and ‘not applicable’<br> - **Example:** colon |
 | characteristics[cell type] | Refers to the ‘type’ of ontology-driven cell (e.g., columnar, cuboidal, epithelial etc.) | - String<br> - **CL derived label**<br> - Free text fall back<br> - Submitter MUST annotate<br> - Other accepted values: ‘not available’ and ‘not applicable’<br> - **Example:** transitional epithelial cell |
 | characteristics[biological replicate] | Refers to the biological replicate. | - String<br> - Free text<br> - Submitter MUST annotate<br> - **Example:** Replicate 1 |
@@ -295,7 +295,7 @@ While the above list is limited to the REQUIRED categories, the SDRF is by desig
 
 | Category | Commonly seen attribute |
 | :---- | :---- |
-| characteristics (ontology source, if any) | developmental stage (TBD), sex (**PATO**), age, ancestry category (**HANCESTRO**), cell line (**CL**), enrichment process (**EFO**), individual (NA), material type (NA) |
+| characteristics (ontology source, if any) | developmental stage (TBD), sex (**PATO**), age, ancestry category (**HANCESTRO**), cell type (**CL**), enrichment process (**EFO**), individual (NA), material type (NA) |
 | comment (ontology source, if any) | technical replicate (NA), modification parameters (NA), precursor mass tolerance (NA), fragment mass tolerance (NA), collision energy (NA), file uri (NA), fractionation method (**PRIDE**), cleavage agents (**PRIDE**), dissociation method (NA), proteomics data acquisition method (**PRIDE**) |
 
 ### Post-translational modifications and cleavage agents
